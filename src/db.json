@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "email": "bunnyyashwanththotha@gmail.com",
+      "password": "Test",
+      "cricketers": [],
+      "id": 1
+    },
+    {
+      "email": "a@a",
+      "password": "a",
+      "cricketers": [],
+      "id": 2
+    }
+  ],
+  "cricketers": []
+}

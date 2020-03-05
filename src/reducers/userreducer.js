@@ -1,4 +1,3 @@
-import React from 'react'
 import { ADD_USER, LOGOUT } from '../authenication/authentication.types'
 
 const initialState = { logindata: {}, login: false }

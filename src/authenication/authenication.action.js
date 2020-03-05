@@ -1,13 +1,14 @@
 
 import axios from 'axios';
 import { ADD_USER, LOGOUT } from './authentication.types';
+import { PROXY } from '../util/ApiUtils'
 
 export const loginuser = (user) => {
     return function (dispatch) {
-        axios.get('http://localhost:3000/users?email=' + user.email)
+        axios.get(PROXY + '/users?email=' + user.email)
             .then(res => {
-                if (res.data.length == 0) {
-                    axios.post('http://localhost:3000/users', {
+                if (res.data.length === 0) {
+                    axios.post(PROXY + '/users', {
                         email: user.email,
                         password: user.password,
                         cricketers: []
@@ -20,7 +21,7 @@ export const loginuser = (user) => {
                     }))
                         .catch(res => alert("invalid"));
                 }
-                else if (res.data[0].password == user.password) {
+                else if (res.data[0].password === user.password) {
                     dispatch({
                         type: ADD_USER,
                         payload: {

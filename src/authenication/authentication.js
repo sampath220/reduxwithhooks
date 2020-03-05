@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginuser } from '../authenication/authenication.action'
 import { Redirect } from 'react-router-dom';
+import { TextField, Box, Button, Container, Typography } from '@material-ui/core'
 const Authentication = () => {
     const [user, setuser] = useState({ email: '', password: '' });
     const dispatch = useDispatch();
@@ -17,15 +18,20 @@ const Authentication = () => {
     }
     let login = useSelector((state) => state.user.login)
     return (
-        <div>
+        <Container maxWidth={false}>
             {login ? <Redirect to="/" /> :
-                <form onSubmit={handleSubmit}>
-                    <input type="email" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange} required></input><br></br>
-                    <input type="password" value={user.password} name="password" placeholder="enter password" onChange={handleChange} required></input><br></br>
-                    <button>submit</button>
-                </form>
+                <Container maxWidth={false} style={{ textAlign: 'center' }}>
+                    <Typography variant="h4">
+                        Enter your login details
+                    </Typography>
+                    <form onSubmit={handleSubmit}>
+                        <Box class={"margin"}><TextField variant="outlined" color="primary" label="Email" size="small" name="email" type="email" required value={user.email} onChange={handleChange} /></Box>
+                        <Box class={"margin"}><TextField variant="outlined" color="primary" label="Password" size="small" name="password" type="password" required value={user.password} onChange={handleChange} /></Box>
+                        <Box class={"margin"}><Button color="primary" variant="contained" type="submit">Login</Button></Box>
+                    </form>
+                </Container>
             }
-        </div>
+        </Container>
     )
 }
 export default Authentication;
