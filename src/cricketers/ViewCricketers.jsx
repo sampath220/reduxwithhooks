@@ -301,7 +301,7 @@ export default function ViewCricketers() {
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={cricketer.name}
+                      key={cricketer.id}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
