@@ -1,5 +1,6 @@
-.button{
-  background-color: #4CAF50; /* Green */
+.button {
+  background-color: #4CAF50;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -9,8 +10,10 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-#link{
-  background-color: #4CAF50; /* Green */
+
+#link {
+  background-color: #4CAF50;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -20,3 +23,9 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+
+.margin {
+  margin: 0.5rem
+}
+
+.float-right {}
