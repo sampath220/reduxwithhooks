@@ -13,5 +13,24 @@
       "id": 2
     }
   ],
-  "cricketers": []
+  "cricketers": [
+    {
+      "name": "AB Deviliers",
+      "country": "South Africa",
+      "userId": "2",
+      "id": 5
+    },
+    {
+      "name": "MS Dhoni",
+      "country": "India",
+      "userId": "2",
+      "id": 6
+    },
+    {
+      "name": "MS Dhoni",
+      "country": "India",
+      "userId": "1",
+      "id": 7
+    }
+  ]
 }
